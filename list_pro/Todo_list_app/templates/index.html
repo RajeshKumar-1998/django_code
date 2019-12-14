@@ -1,0 +1,76 @@
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>{% block title %}ToDo App{% endblock %} </title>
+		{% load static %}
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		<link rel="stylesheet" href="{% static 'style.css' %}" />
+		<link rel="stylesheet" href="{% static 'bs/css/flatly.min.css' %}" />
+	</head>
+	<body>
+    {% block content %}
+    <div class="container-fluid" id="wrapper">
+
+			<div class="row">
+				<div class="col-lg-4 col-lg-offset-4" id="content">
+					<img src="data:image/jpeg;base64,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" height ="50" width="50">
+					<h2>⏳  WHAT'S NEXT THING TO DO  ⌛</h2>
+
+					<form action="{% url 'add' %}" method="POST" role="form">
+						{% csrf_token %}
+
+						<div class="form-group">
+							<div class="input-group">
+							  {{ form.text }}
+								<span class="input-group-btn">
+								  <button type="submit" class="btn btn-default" id="add-btn">ADD</button>
+							  </span>
+								</div>
+						</div>
+					</form>
+
+<div class="row t10">
+						<div class="col-lg-12">
+							<div class="btn-toolbar">
+								<div class="btn-group">
+									<a href="{% url 'del' %}"> <button type="button" class="btn btn-warning">
+										<i class="glyphicon glyphicon-trash"></i> DELETE COMPLETED
+									</button></a>
+								</div>
+								<div class="btn-group">
+									<a href="{% url 'delall' %}"> <button type="button" class="btn btn-warning">
+										<i class="glyphicon glyphicon-trash"></i> DELETE ALL
+									</button></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<ul class="list-group t20">
+						{% for todo in todo_list %}
+						     {% if todo.complete %}
+						<li class="list-group-item todo-completed">{{ todo.text }}</li>
+
+						{% else %}
+						<a href="{% url 'complete' todo.id %}"><li class="list-group-item">{{ todo.text }}</li></a>
+						{% endif %}
+
+						{% endfor %}
+						<li class="list-group-item">Track your daily works 🕒 </li>
+					</ul>
+				</div>
+			</div>
+        <footer>
+				<div class="row pad">
+					<div class="col-lg-12 text-center">
+						Copyright &copy; 2019 <strong>ToDo App</strong>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+{% endblock %}
+</html>
